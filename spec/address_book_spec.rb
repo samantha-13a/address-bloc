@@ -127,4 +127,15 @@ RSpec.describe AddressBook do
 			expect(entry).to be_nil
 		end
 	end
+
+	describe "#total_annihilation" do 
+		it "should delete all entries" do 
+			book.add_entry("Sammi", "555-555-1111", "sammi@blocmail.com")
+			book.add_entry("Chris", "555-555-2222", "chris@blocmail.com")
+			book.add_entry("Ashley", "555-555-3333", "ashley@blocmail.com")
+
+			book.total_annihilation 
+			expect(book.entries.size).to eq 0
+		end
+	end
 end

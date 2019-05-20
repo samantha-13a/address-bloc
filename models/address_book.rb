@@ -47,4 +47,9 @@ require "csv"
 
 		return nil
 	end
+
+	def total_annihilation
+		@entries = []
+	end
+
 end
